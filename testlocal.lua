@@ -1,5 +1,3 @@
--- Note: writefile, readfile, and getcustomasset are external functions
--- that need to be provided by the execution environment (e.g., Synapse X, KRNL, etc.)
 local isasveon = false 
 local isreadon = false 
 local iscustomasseton = false 
