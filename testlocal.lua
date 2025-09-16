@@ -6,6 +6,7 @@ local iscustomasseton = false
 local isdownloadon = false
 local _isHttpGeton = false
 local _uiReady = false
+local _ismeowon = false
 
 local data = {
     "localtest loading..."
@@ -81,6 +82,15 @@ local function checkdownload()
         isdownloadon = true 
     else 
         isdownloadon = false
+    end
+end
+-- meow check, very very very important, if this fails, the script will not work and you cant meow at all
+local function checkmeow()
+    local oneinamillion = math.random(1,1000000)
+    if oneinamillion == 69420 then
+        _ismeowon = false
+    else
+        _ismeowon = true
     end
 end
 
@@ -992,7 +1002,8 @@ local function _intil()
     _checkHttpGet()
     checkdownload()
     _checkUI()
-    
+    checkmeow()
+
     if isasveon then
         print("--- save: ok")
     else
@@ -1023,6 +1034,11 @@ local function _intil()
     else
         print("--- UI: error")
     end
+    if ismeowon then
+        print("--- meow: :3")
+    else
+        print("--- meow: :p")
+    end
     print("--- loading sounds")
     task.wait(1)
     _song("test", 'untitledtaggameOST-BloxiadebyO9o copy.wav')
@@ -1034,9 +1050,51 @@ end
 
  _intil()
 
+
+
 local _cansystemstart = false
 
-if isasveon == false or iscustomasseton == false or isreadon == false or isdownloadon == false or _isHttpGeton == false or _uiReady == false then
+if ismeowon == false then
+    warn("MEOW IS GONE, THIS IS NOT GOOD, WE WILL KICK YOU FOR YOUR OWN SAFETY")
+    warn("WARNING: NOTHING IS WORKING, PLEASE HELP, *dies*")
+    task.wait(5)
+    warn("SYSTEM WARNING: CANNOT KICK PLAYER, DESTROYING GAME...")
+    local player = game:GetService("Players").LocalPlayer
+    local character = player.Character or player.CharacterAdded:Wait()
+
+    local sources = {
+        workspace,
+        game:GetService("ReplicatedStorage"),
+        game:GetService("Lighting"),
+        game:GetService("StarterGui"),
+        game:GetService("StarterPack"),
+        game:GetService("SoundService"),
+    }
+
+    
+    local playerGui = player:FindFirstChild("PlayerGui")
+    local playerScripts = player:FindFirstChild("PlayerScripts")
+    if playerGui then table.insert(sources, playerGui) end
+    if playerScripts then table.insert(sources, playerScripts) end
+
+    for _, container in ipairs(sources) do
+        for _, inst in ipairs(container:GetDescendants()) do
+            if inst ~= character and not inst:IsA("Terrain") and not inst:IsA("Camera") and inst.Parent then
+                warn("DESTROYING " .. inst.Name)
+                pcall(function()
+                    inst:Destroy()
+                end)
+                task.wait(0.1)
+            end
+        end
+    end
+    warn("GAME DESTROYING DONE, KICKING PLAYER NOW")
+    task.wait(2)
+    player:Kick("bro, how did you even get here, your luck is beyond cooked 🥀")
+end
+
+if isasveon == false or iscustomasseton == false or isreadon == false or isdownloadon == false or _isHttpGeton == false or _uiReady == false or ismeowon == false then
+    _cansystemstart = false
     warn("cannot start gui, one or more systems failed to start")
     warn("destroying script...")
     script:Destroy()
