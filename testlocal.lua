@@ -1,9 +1,3 @@
--- DisPlayoptify v0.2 - Enhanced with Advanced Local File Handling & Modern GUI
--- Based on sUNC documentation: https://docs.sunc.su/
--- Supports: Synapse X, KRNL, Fluxus, Script-Ware, Electron, and more
--- Features: Advanced file management, modern UI, comprehensive fallbacks
-
--- Ultra-optimized Drawing-based UI system using sUNC API
 local Drawing = Drawing or {}
 
 -- Enhanced error handling and logging
@@ -953,7 +947,7 @@ local function _createLoadingScreen()
     subtitle.Size = UDim2.new(1, -40, 0, 25)
     subtitle.Position = UDim2.new(0, 20, 0, 60)
     subtitle.BackgroundTransparency = 1
-    subtitle.Text = "Enhanced with Self-Healing & sUNC Compatibility"
+    subtitle.Text = "loading..."
     subtitle.TextColor3 = Color3.fromRGB(200, 200, 200)
     subtitle.TextScaled = true
     subtitle.Font = Enum.Font.Gotham
