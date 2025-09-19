@@ -5,7 +5,7 @@ a recode of displayoptify, opend for beta testing,
 ## 🚀 Quick Start
 Paste this into your executor:
 ```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/displaynameroblox/displayoptiy/refs/heads/main/Displayotiyv1.0.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/displaynameroblox/untitled-projects/refs/heads/main/testlocal.lua"))()
 ```
 ## ✨ Features
 
