@@ -3,7 +3,7 @@
 a recode of displayoptify, opend for beta testing,
 
 ## What is displaoptify?
-it's spotify within roblox, you can play from the web or from roblox iself or if you don't any of those then you can play
+it's spotify within roblox, you can play from the web or from roblox itself or if you don't want any of those then you can play
 from your local files!
 
 ## 🚀 Quick Start
